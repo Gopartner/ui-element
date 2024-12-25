@@ -1,0 +1,84 @@
+$sidebar-width: 250px;
+$sidebar-bg: white;
+$sidebar-text-color: #00008b;
+$sidebar-hover-bg: #34495e;
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -$sidebar-width; // Mulai di luar layar
+  width: $sidebar-width;
+  height: 100%;
+  background-color: $sidebar-bg;
+  color: $sidebar-text-color;
+  transition: left 0.3s ease; // Transisi untuk efek buka/tutup
+  z-index: 1000;
+  padding: 20px;
+
+  &.open {
+    left: 0; // Tampilkan sidebar
+  }
+
+  .close-btn {
+    background: none;
+    border: none;
+    color: $sidebar-text-color;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    &:hover {
+      color: #e74c3c; // Warna saat hover
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 20px 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $sidebar-hover-bg; // Efek hover
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin-right: 10px; // Jarak antara ikon dan teks
+        }
+      }
+    }
+  }
+
+  // Gaya untuk item collapsible
+  .collapsible {
+    padding: 16px;
+
+    .close-btn {
+      margin-bottom: 16px;
+    }
+
+    li {
+      margin: 8px 0;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // Gaya untuk ThemeDropdown
+  .mt-4 {
+    margin-top: 16px;
+  }
+}

@@ -1,0 +1,68 @@
+// Menerapkan variabel warna untuk kemudahan penggunaan
+$bg-color: #f9f9f9; // Warna latar belakang untuk chat window
+$message-bg-driver: #cce5ff; // Warna latar belakang untuk pesan driver
+$message-bg-passenger: #d4edda; // Warna latar belakang untuk pesan penumpang
+
+// Styling untuk chat window
+.chat-window {
+  max-height: 400px; // Maksimum tinggi dari chat window
+  overflow-y: auto; // Mengizinkan scroll vertikal jika konten melebihi tinggi
+  padding: 10px; // Padding di dalam chat window
+  border: 1px solid #ccc; // Border untuk chat window
+  border-radius: 5px; // Sudut melengkung pada border
+  background-color: $bg-color; // Menggunakan variabel warna latar belakang
+}
+
+// Styling untuk daftar pesan
+.message-list {
+  list-style-type: none; // Menghapus bullet point pada list
+  padding: 0; // Menghapus padding default
+  margin: 0; // Menghapus margin default
+}
+
+// Styling untuk setiap pesan
+.message {
+  padding: 10px; // Padding untuk setiap pesan
+  margin: 5px 0; // Margin vertikal antara pesan
+  border-radius: 5px; // Sudut melengkung pada pesan
+}
+
+// Styling untuk pesan dari driver
+.driver-message {
+  background-color: $message-bg-driver; // Menggunakan variabel warna untuk pesan driver
+}
+
+// Styling untuk pesan dari penumpang
+.passenger-message {
+  background-color: $message-bg-passenger; // Menggunakan variabel warna untuk pesan penumpang
+}
+
+// Styling untuk form kirim pesan
+.send-message-form {
+  display: flex; // Menggunakan flexbox untuk tata letak
+  margin-top: 10px; // Margin atas untuk pemisahan dari chat window
+}
+
+// Styling untuk input pesan
+.input-message {
+  flex: 1; // Membuat input mengambil ruang yang tersisa
+  padding: 10px; // Padding di dalam input
+  border: 1px solid #ccc; // Border untuk input
+  border-radius: 5px; // Sudut melengkung pada border
+}
+
+// Styling untuk tombol kirim
+.send-button {
+  background-color: #007bff; // Warna latar belakang tombol
+  color: white; // Warna teks tombol
+  border: none; // Menghapus border default
+  border-radius: 5px; // Sudut melengkung pada tombol
+  padding: 10px; // Padding di dalam tombol
+  margin-left: 5px; // Margin kiri untuk pemisahan dari input
+  cursor: pointer; // Menampilkan kursor pointer saat hover
+  
+  // Efek hover pada tombol
+  &:hover {
+    background-color: darken(#007bff, 10%); // Menggelapkan warna latar belakang saat hover
+  }
+}

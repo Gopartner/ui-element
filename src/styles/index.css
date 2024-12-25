@@ -1,0 +1,26 @@
+/* dark mode */
+
+:root {
+  --primer: #3498db;
+  --sekunder: #f1c40f;
+  --background-color: #f9f9f9;
+  --text-color: #333;
+  --border: #ddd;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body.light {
+  --background-color: #e2e2e6;
+  --text-color: rgb(18, 17, 24);
+}
+body.dark {
+  --background-color: rgb(18, 17, 24);
+  --text-color: #d0d2ec;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* varian shadow */
